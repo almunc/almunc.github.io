@@ -1,0 +1,28 @@
+html{
+    max-height: 100% !important;
+}
+body{
+    background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143)) no-repeat;
+    color: #ffffff !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.wrapper{
+    margin: 30px 25px;
+}
+.inner{
+    margin: 25px 10px;
+}
+.card{
+    background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+}
+.ansatz{
+    font-family: "Courier New";
+    margin-left: 20px;
+}

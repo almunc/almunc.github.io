@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Convert your name to a decimal number</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h3><center>Find out your personal lucky number by converting your name to a decimal number!</center></h3>
+        <form id="name" style="margin-top: 50px;">
+            <label for="nameInput">Name or word to convert:</label>
+                <input type="text" id="nameInput" placeholder="your name..." pattern="[A-Za-z]{1,}" title="Your name or any word (a-z, A-Z only)">
+            <label for="basis">Basis of the numeral system:</label>
+                <input type="number" id="base" placeholder="basis of the number system" value="35">
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </form>
+
+        <div class="explanation" id="explanation">
+
+        </div>
+        <div class="ansatz" id="ansatz">
+
+        </div>
+    <div>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
