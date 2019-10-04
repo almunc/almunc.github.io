@@ -10,10 +10,10 @@ var explanation = `
             The numbers from 0 to 9 are the same, while for numbers from 10 to 15 the first 6 letters of the alphabet are used, so 10 equals A, 11 => B, 12 => C 13 => D, 14 => E, 15 => F. So "CAFE" in the hexadecimal system would equal 51966 in the decimal system.
             </p>
             <p>
-            2.) Because a word usually consists out of more than the first six letters of the alphabet, we will use a fictive numeral system with a base of 35 (0-9, A-Z) by default. You can manually change the base to experiment with it.
+            2.) Because a word usually consists out of more than the first six letters of the alphabet, we will use a fictive numeral system with a base of 36 (0-9, A-Z) by default. You can manually change the base to experiment with it.
             </p>
             <p>
-            3.) Now start with the last character of the word and convert it to a decimal number (A => 10, B => 11, C => 12 ...) and multiply it with the base (default: 35) to the power of 0 (= 1), write down the result.
+            3.) Now start with the last character of the word and convert it to a decimal number (A => 10, B => 11, C => 12 ...) and multiply it with the base (default: 36) to the power of 0 (= 1), write down the result.
             Repeat the  the same procedure for the second last character but this time with base to the 1 (= base) and all following characters, untill you've finished with the first character.
             </p>
             <p>
@@ -51,7 +51,7 @@ function main(value, base){
     var ansatz = document.getElementById("ansatz");
     var success = true;
 
-    ansatz.innerHTML += `Ansatz: <br>`;
+    ansatz.innerHTML = `Ansatz: <br>`;
     for(let i = value.length-1; i >= 0; i--){
         var temp = 0;
         index = ALPHABET.indexOf(value[i]);
@@ -70,7 +70,7 @@ function main(value, base){
         ansatz.innerHTML += `<hr>Result: ${numberWithCommas(res)}`;
     }
     else{
-        ansatz.innerHTML = explanation + `<div class="alert alert-danger" role="alert">Failed to convert your word, because ${ALPHABET[index]} requires a base of at least ${index+1}.</div>`;
+        ansatz.innerHTML = `<div class="alert alert-danger" role="alert">Failed to convert your word, because ${ALPHABET[index]} requires a base of at least ${index+1}.</div>`;
     }
     console.log(numberWithCommas(res));
 }
